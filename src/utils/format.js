@@ -1,11 +1,11 @@
 export function formatCurrency(value) {
   try {
-    return new Intl.NumberFormat(undefined, {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
-      maximumFractionDigits: 2
+      currency: 'INR',
+      maximumFractionDigits: 0
     }).format(value)
   } catch (e) {
-    return `$${Number(value).toFixed(2)}`
+    return
   }
 }
